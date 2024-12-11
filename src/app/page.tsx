@@ -190,7 +190,7 @@ export default function Home() {
                 key={index}
                 className="bg-white p-6 rounded-lg shadow-md flex justify-center items-center"
               >
-                <a
+                <Link
                   href={org.url}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -206,7 +206,7 @@ export default function Home() {
                   <p className="text-black font-bold hover:underline">
                     {org.title}
                   </p>
-                </a>
+                </Link>
               </div>
             ))}
           </div>
