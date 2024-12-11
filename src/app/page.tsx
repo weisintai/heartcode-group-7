@@ -166,25 +166,38 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                title: "Center for Substance Abuse Prevention (CSAP)",
-                url: "https://www.samhsa.gov/prevention",
-                icon: "csap-icon.png",
+                title: "Central Narcotics Bureau (CNB)",
+                url: "https://www.cnb.gov.sg/",
+                icon: "cnb-icon.png",
               },
               {
-                title: "Community Anti-Drug Coalitions of America (CADCA)",
-                url: "https://www.cadca.org/",
-                icon: "cadca-icon.png",
+                title: "Singapore Anti-Narcotics Association (SANA)",
+                url: "https://www.sana.org.sg/",
+                icon: "sana-icon.png",
+              },
+              {
+                title: "National Council Against Drug Abuse (NCADA)",
+                url: "https://www.ncada.org.sg/",
+                icon: "ncada-icon.png",
+              },
+              {
+                title: "Ministry of Home Affairs – Keeping Singapore Drug-Free",
+                url: "https://www.mha.gov.sg/what-we-do/keeping-singapore-drug-free",
+                icon: "mha-icon.png",
               },
             ].map((org, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                <Link
+              <div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-md flex justify-center items-center"
+              >
+                <a
                   href={org.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block"
                 >
                   <Image
-                    src={`/${org.icon}`}
+                    src={`/icon/${org.icon}`}
                     alt={`${org.title} Icon`}
                     width={100}
                     height={100}
@@ -193,7 +206,7 @@ export default function Home() {
                   <p className="text-black font-bold hover:underline">
                     {org.title}
                   </p>
-                </Link>
+                </a>
               </div>
             ))}
           </div>
