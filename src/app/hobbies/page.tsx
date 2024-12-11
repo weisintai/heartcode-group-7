@@ -1,54 +1,51 @@
 // @ts-nocheck
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
-import Bike from "@/app/assets/Bike.jpg"
-import React from 'react';
-import Image from "next/image"
-
+import Bike from "@/app/assets/Bike.jpg";
+import React from "react";
+import Image from "next/image";
 
 // AboutMe Component
 const AboutMe: React.FC = () => {
   return (
+    <BackgroundBeamsWithCollision className="!h-full">
+      <div style={styles.container}>
+        <header style={styles.header}>
+          <h1></h1>
+        </header>
 
-<BackgroundBeamsWithCollision>
-    <div style={styles.container}>
-      <header style={styles.header}>
-        <h1></h1>
-      </header>
-      
-      <section style={styles.introduction}>
-        <h1 className="text-2xl font-bold">Hi, I'm Lucas!</h1>
-        <p>
-          I love cycling as a hobby because I got to meet many new friends through it and explored places I've never been to in Singapore.
-        </p>
-      </section>
-      
-      <section style={styles.hobbies} className="flex gap 3">
-        <div>
-        <h2 className="text-2xl font-bold">What Bike Do I Ride?</h2>
-        <div style={styles.hobbyList}>
-          <div style={styles.hobbyItem}>
-            <h3>Fixed Gear Bike</h3>
-            <p>
-              A fixed gear bike is a very unique bike that only has one gear and has no brakes and you stop by applying pressure on the paddles as the pedals won't stop moving.
-            </p>
+        <section style={styles.introduction}>
+          <h1 className="text-2xl font-bold">Hi, I'm Lucas!</h1>
+          <p>
+            I love cycling as a hobby because I got to meet many new friends
+            through it and explored places I've never been to in Singapore.
+          </p>
+        </section>
+
+        <section style={styles.hobbies} className="flex gap 3">
+          <div>
+            <h2 className="text-2xl font-bold">What Bike Do I Ride?</h2>
+            <div style={styles.hobbyList}>
+              <div style={styles.hobbyItem}>
+                <h3>Fixed Gear Bike</h3>
+                <p>
+                  A fixed gear bike is a very unique bike that only has one gear
+                  and has no brakes and you stop by applying pressure on the
+                  paddles as the pedals won't stop moving.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-        </div>
-        <div>
-          <Image src = {Bike} alt = "" height = {1200} width = {1200}></Image>
-        </div>
-      </section>
-      
-      <section style={styles.contact}>
-        <h2 className="text-2xl font-bold">Add me On Social Media!</h2>
-        <p>
-          Follow me on Instagram @_1uc45_133_
-        </p>
-        <p>
-          Follow me on Tik Tok @45_degree
-        </p>
-      </section>
-    </div>
+          <div>
+            <Image src={Bike} alt="" height={1200} width={1200}></Image>
+          </div>
+        </section>
+
+        <section style={styles.contact}>
+          <h2 className="text-2xl font-bold">Add me On Social Media!</h2>
+          <p>Follow me on Instagram @_1uc45_133_</p>
+          <p>Follow me on Tik Tok @45_degree</p>
+        </section>
+      </div>
     </BackgroundBeamsWithCollision>
   );
 };
@@ -56,61 +53,61 @@ const AboutMe: React.FC = () => {
 // Inline styles object
 const styles = {
   container: {
-    width: '150%',
-    maxWidth: '900px',
-    margin: '0 auto',
-    padding: '20px',
-    fontFamily: 'Courier New, monospace',
-    color: '#FFFFFF',
+    width: "150%",
+    maxWidth: "900px",
+    margin: "0 auto",
+    padding: "20px",
+    fontFamily: "Courier New, monospace",
+    color: "#FFFFFF",
   },
   header: {
-    textAlign: 'center',
-    marginBottom: '40px',
+    textAlign: "center",
+    marginBottom: "40px",
   },
   headerTitle: {
-    fontSize: '3rem',
-    color: '#4CAF50',
+    fontSize: "3rem",
+    color: "#4CAF50",
   },
   introduction: {
-    marginBottom: '30px',
+    marginBottom: "30px",
   },
   introductionText: {
-    fontSize: '1.1rem',
-    lineHeight: '1.6',
-    color: '#555',
+    fontSize: "1.1rem",
+    lineHeight: "1.6",
+    color: "#555",
   },
   hobbies: {
-    marginBottom: '30px',
+    marginBottom: "30px",
   },
   hobbyList: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
+    display: "flex",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
   },
   hobbyItem: {
-    width: '45%',
-    marginBottom: '20px',
+    width: "45%",
+    marginBottom: "20px",
   },
   hobbyItemTitle: {
-    fontSize: '1.5rem',
-    color: '#00796b',
-    marginBottom: '10px',
+    fontSize: "1.5rem",
+    color: "#00796b",
+    marginBottom: "10px",
   },
   hobbyItemText: {
-    fontSize: '1rem',
-    color: '#555',
+    fontSize: "1rem",
+    color: "#555",
   },
   contact: {
-    marginTop: '30px',
-    textAlign: 'center',
+    marginTop: "30px",
+    textAlign: "center",
   },
   contactLink: {
-    color: '#00796b',
-    textDecoration: 'none',
-    fontWeight: 'bold',
+    color: "#00796b",
+    textDecoration: "none",
+    fontWeight: "bold",
   },
   contactLinkHover: {
-    textDecoration: 'underline',
+    textDecoration: "underline",
   },
 };
 
