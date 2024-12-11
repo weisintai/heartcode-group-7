@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 import { MyNavigationMenu } from "@/components/navigation-menu";
+import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,6 +28,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-dvh`}
       >
         <main className="h-full">
+          <Toaster />
           <MyNavigationMenu />
           {children}
         </main>
