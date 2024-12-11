@@ -54,148 +54,170 @@ export default function Quiz() {
   }
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="w2/3 space-y-6">
-        <FormField
-          control={form.control}
-          name="question1"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Question 1:</FormLabel>
-              <FormDescription>
-                What is a common physical sign of drug abuse?
-              </FormDescription>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Please select an answer" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  <SelectItem value="A">Increased energy</SelectItem>
-                  <SelectItem value="B">Bloodshot eyes</SelectItem>
-                  <SelectItem value="C">Improved concentration</SelectItem>
-                  <SelectItem value="D">Better sleep quality</SelectItem>
-                </SelectContent>
-              </Select>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="question2"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Question 2:</FormLabel>
-              <FormDescription>
-                Which of the following is a potential consequence of drug abuse?
-              </FormDescription>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Please select an answer" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  <SelectItem value="A">Improved social skills</SelectItem>
-                  <SelectItem value="B">Legal issues</SelectItem>
-                  <SelectItem value="C">Better academic performance</SelectItem>
-                  <SelectItem value="D">Enhanced creativity</SelectItem>
-                </SelectContent>
-              </Select>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="question3"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Question 3:</FormLabel>
-              <FormDescription>
-                What is one of the most effective ways to prevent drug abuse
-                among teenagers?
-              </FormDescription>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Please select an answer" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  <SelectItem value="A">Ignoring the issue</SelectItem>
-                  <SelectItem value="B">
-                    Open communication about risks
-                  </SelectItem>
-                  <SelectItem value="C">Allowing them to experiment</SelectItem>
-                  <SelectItem value="D">Social isolation</SelectItem>
-                </SelectContent>
-              </Select>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="question4"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Question 4:</FormLabel>
-              <FormDescription>
-                Which substance is commonly associated with addiction and
-                withdrawal symptoms?
-              </FormDescription>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Please select an answer" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  <SelectItem value="A">Caffeine</SelectItem>
-                  <SelectItem value="B">Alcohol</SelectItem>
-                  <SelectItem value="C">Sugar</SelectItem>
-                  <SelectItem value="D">Nicotine</SelectItem>
-                </SelectContent>
-              </Select>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="question5"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Question 5:</FormLabel>
-              <FormDescription>
-                What is a common reason individuals may turn to drug use?
-              </FormDescription>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Please select an answer" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  <SelectItem value="A">To enhance their health</SelectItem>
-                  <SelectItem value="B">
-                    To cope with stress or trauma
-                  </SelectItem>
-                  <SelectItem value="C">
-                    To improve their relationships
-                  </SelectItem>
-                  <SelectItem value="D">To achieve personal goals</SelectItem>
-                </SelectContent>
-              </Select>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit">Submit</Button>
-      </form>
-    </Form>
+    <div className="p-4">
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="w2/3 space-y-6">
+          <FormField
+            control={form.control}
+            name="question1"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Question 1:</FormLabel>
+                <FormDescription>
+                  What is a common physical sign of drug abuse?
+                </FormDescription>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Please select an answer" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="A">Increased energy</SelectItem>
+                    <SelectItem value="B">Bloodshot eyes</SelectItem>
+                    <SelectItem value="C">Improved concentration</SelectItem>
+                    <SelectItem value="D">Better sleep quality</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="question2"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Question 2:</FormLabel>
+                <FormDescription>
+                  Which of the following is a potential consequence of drug
+                  abuse?
+                </FormDescription>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Please select an answer" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="A">Improved social skills</SelectItem>
+                    <SelectItem value="B">Legal issues</SelectItem>
+                    <SelectItem value="C">
+                      Better academic performance
+                    </SelectItem>
+                    <SelectItem value="D">Enhanced creativity</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="question3"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Question 3:</FormLabel>
+                <FormDescription>
+                  What is one of the most effective ways to prevent drug abuse
+                  among teenagers?
+                </FormDescription>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Please select an answer" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="A">Ignoring the issue</SelectItem>
+                    <SelectItem value="B">
+                      Open communication about risks
+                    </SelectItem>
+                    <SelectItem value="C">
+                      Allowing them to experiment
+                    </SelectItem>
+                    <SelectItem value="D">Social isolation</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="question4"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Question 4:</FormLabel>
+                <FormDescription>
+                  Which substance is commonly associated with addiction and
+                  withdrawal symptoms?
+                </FormDescription>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Please select an answer" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="A">Caffeine</SelectItem>
+                    <SelectItem value="B">Alcohol</SelectItem>
+                    <SelectItem value="C">Sugar</SelectItem>
+                    <SelectItem value="D">Nicotine</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="question5"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Question 5:</FormLabel>
+                <FormDescription>
+                  What is a common reason individuals may turn to drug use?
+                </FormDescription>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Please select an answer" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="A">To enhance their health</SelectItem>
+                    <SelectItem value="B">
+                      To cope with stress or trauma
+                    </SelectItem>
+                    <SelectItem value="C">
+                      To improve their relationships
+                    </SelectItem>
+                    <SelectItem value="D">To achieve personal goals</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <Button type="submit">Submit</Button>
+        </form>
+      </Form>
+    </div>
   );
 }
