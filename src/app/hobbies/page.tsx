@@ -7,25 +7,32 @@ import Image from "next/image";
 // AboutMe Component
 const AboutMe: React.FC = () => {
   return (
-    <BackgroundBeamsWithCollision className="!h-full">
+    <BackgroundBeamsWithCollision className="!min-h-full">
       <div style={styles.container}>
         <header style={styles.header}>
           <h1></h1>
         </header>
 
         <section style={styles.introduction}>
-          <h1 className="text-2xl font-bold text-black dark:text-white">Hi, I'm Lucas!</h1>
+          <h1 className="text-2xl font-bold text-black dark:text-white">
+            Hi, I'm Lucas!
+          </h1>
           <p className="text-black dark:text-white">
             I love cycling as a hobby because I got to meet many new friends
             through it and explored places I've never been to in Singapore.
           </p>
         </section>
 
-        <section style={styles.hobbies} className="flex gap 3">
+        <section
+          style={styles.hobbies}
+          className="flex gap-4 flex-col-reverse md:flex-row"
+        >
           <div>
-            <h2 className="text-2xl font-bold text-black dark:text-white">What Bike Do I Ride?</h2>
+            <h2 className="text-2xl font-bold text-black dark:text-white">
+              What Bike Do I Ride?
+            </h2>
             <div style={styles.hobbyList}>
-              <div style={styles.hobbyItem}>
+              <div style={styles.hobbyItem} className="md:w-1/2">
                 <h3 className="text-black dark:text-white">Fixed Gear Bike</h3>
                 <p className="text-black dark:text-white">
                   A fixed gear bike is a very unique bike that only has one gear
@@ -41,9 +48,15 @@ const AboutMe: React.FC = () => {
         </section>
 
         <section style={styles.contact}>
-          <h2 className="text-2xl font-bold text-black dark:text-white">Add me On Social Media!</h2>
-          <p className="text-black dark:text-white">Follow me on Instagram @_1uc45_133_</p>
-          <p className="text-black dark:text-white">Follow me on Tik Tok @45_degree</p>
+          <h2 className="text-2xl font-bold text-black dark:text-white">
+            Add me On Social Media!
+          </h2>
+          <p className="text-black dark:text-white">
+            Follow me on Instagram @_1uc45_133_
+          </p>
+          <p className="text-black dark:text-white">
+            Follow me on Tik Tok @45_degree
+          </p>
         </section>
       </div>
     </BackgroundBeamsWithCollision>
@@ -85,7 +98,6 @@ const styles = {
     flexWrap: "wrap",
   },
   hobbyItem: {
-    width: "45%",
     marginBottom: "20px",
   },
   hobbyItemTitle: {

@@ -4,13 +4,12 @@ import Link from "next/link";
 import { FlipWords } from "@/components/ui/flip-words";
 
 export default function Home() {
-
   const words = ["DRUGS", "WEED", "ICE", "CRACK", "CANNABIS"];
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-800 font-sans">
       <header className="bg-neutral-600 text-white text-center py-8">
         <h1 className="text-5xl font-mono font-bold mb-2 text-white">
-          CHOOSE LIFE, NOT  <FlipWords words={words} />
+          CHOOSE LIFE, NOT <FlipWords words={words} />
         </h1>
         <p className=" font-mono font-normal mb-4">
           Join Us In The Fight Against Drug Abuse And Help Create A Healthier,
@@ -61,7 +60,7 @@ export default function Home() {
         </section>
 
         <section id="statistics" className="my-12">
-          <h2 className="text-3xl font-bold font-mono text-black dark:text-white border-b-2 border-neutral-500 pb-2 mb-6">
+          <h2 className="text-3xl font-bold font-mono text-black dark:text-white border-b-2 border-neutral-500 pb-2 mb-6 text-center">
             Statistics and Facts
           </h2>
           <p className="text-lg mb-2 text-black dark:text-white">
@@ -75,10 +74,10 @@ export default function Home() {
         </section>
 
         <section id="stories" className="my-12">
-          <h2 className="text-3xl font-bold font-monotext-black dark:text-white border-b-2 border-neutral-500 pb-2 mb-6">
+          <h2 className="text-3xl font-bold font-monotext-black dark:text-white border-b-2 border-neutral-500 pb-2 mb-6 text-center">
             Personal Stories
           </h2>
-          <p className="mb-4text-black dark:text-white">
+          <p className="mb-4text-black dark:text-white mb-8">
             Read inspiring stories of individuals like Jeremy who have overcome
             addiction.
           </p>
@@ -92,7 +91,7 @@ export default function Home() {
         </section>
 
         <section id="prevention-articles" className="my-12">
-          <h2 className="text-3xl font-bold font-mono text-black dark:text-white border-b-2 border-neutral-500 pb-2 mb-6">
+          <h2 className="text-3xl font-bold font-mono text-black dark:text-white border-b-2 border-neutral-500 pb-2 mb-6 text-center">
             Drug Prevention Articles
           </h2>
           <ul className="space-y-2">
@@ -126,7 +125,7 @@ export default function Home() {
         </section>
 
         <section id="support" className="my-12">
-          <h2 className="text-3xl font-bold font-mono text-black dark:text-white border-b-2 border-neutral-500 pb-2 mb-6">
+          <h2 className="text-3xl font-bold font-mono text-black dark:text-white border-b-2 border-neutral-500 pb-2 mb-6 text-center">
             Support and Help
           </h2>
           <p className="mb-4 text-black dark:text-white">
@@ -146,20 +145,22 @@ export default function Home() {
         </section>
 
         <section id="events" className="my-12">
-          <h2 className="text-3xl font-bold font-mono text-black dark:text-white border-b-2 border-neutra;-500 pb-2 mb-6">
+          <h2 className="text-3xl font-bold font-mono text-black dark:text-white border-b-2 border-neutra;-500 pb-2 mb-6 text-center">
             Events and Campaigns
           </h2>
-          <h2 className="text-1x1 font-normal text-black dark:text-white">
+          <h2 className="text-1x1 font-normal text-black dark:text-white text-center">
             Join our upcoming events and campaigns to raise awareness and
             support the cause{" "}
+            <span>
+              <Link
+                href="https://www.sana.org.sg/events/"
+                className="text-2x1 font-semibold text-black dark:text-white hover:underline"
+              >
+                here
+              </Link>
+              .
+            </span>
           </h2>
-          <Link
-            href="https://www.sana.org.sg/events/"
-            className="text-2x1 font-semibold text-black dark:text-white hover:underline"
-          >
-            here
-          </Link>
-          .
         </section>
 
         <section id="find-out-more" className="my-12 text-center">
@@ -218,7 +219,7 @@ export default function Home() {
 
       <footer className="bg-neutral-700 text-white text-center py-8">
         <p className="mb-4 text-2xl font-mono">
-        “If You Can Quit For A Day, You Can Quit For A Lifetime.”
+          “If You Can Quit For A Day, You Can Quit For A Lifetime.”
         </p>
       </footer>
     </div>
