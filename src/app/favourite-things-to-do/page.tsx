@@ -17,25 +17,25 @@ export default function AnimatedTestimonialsDemo() {
         },
         {
             quote:
-                "Chcken rice has been my favourite food since young, the fragrance of the rice, the chicken, it is all very tast and I love it.",
+                "Chcken rice has been my favourite food since young, the fragrance of the rice, the chicken, it is all very tasty and I love it.",
             name: "My Favourite Food",
             designation: "Chicken Rice",
             src: "/image/chicken.jpg"
         },
         {
             quote:
-                "Cycling is usually my form of transport, exericise and a way to relieve my stress. It keeps me alive and refreshed whenever the wind blows to my face.",
+                "Cycling is usually my form of transport, exercise and a way to relieve my stress. It keeps me alive and refreshed whenever the wind blows to my face.",
             name: "Cycling",
-            designation: "Fixed gear",
+            designation: "Bicycle",
             src: "/image/bike.jpg"
         },
 
     ];
     return (
 
-    <div className="mx-auto overflow-auto min-h-fit">
+    <div className="mx-auto overflow-auto min-h-fit text-black dark:text-white">
     <Vortex
-      backgroundColor=" bg-black "
+      backgroundColor=" bg-transparent "
       className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-dvh"
     >
       <AnimatedTestimonials testimonials={testimonials} />;

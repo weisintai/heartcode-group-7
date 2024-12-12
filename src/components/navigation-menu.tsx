@@ -13,6 +13,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { ModeToggle } from "./mode-toggle";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -37,7 +38,7 @@ export function MyNavigationMenu() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Don't Do Drugs</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] z-[999]">
               <li className="row-span-3">
@@ -85,6 +86,7 @@ export function MyNavigationMenu() {
           </Link>
         </NavigationMenuItem>
       </NavigationMenuList>
+      <ModeToggle />
     </NavigationMenu>
   );
 }

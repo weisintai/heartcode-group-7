@@ -102,9 +102,6 @@ export const Vortex = (props: VortexProps) => {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = backgroundColor;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
     drawParticles(ctx);
     renderGlow(canvas, ctx);
     renderToScreen(canvas, ctx);
@@ -242,7 +239,7 @@ export const Vortex = (props: VortexProps) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         ref={containerRef}
-        className="absolute h-full w-full inset-0 z-0 bg-transparent flex items-center justify-center"
+        className="absolute h-full w-full inset-0 z-0 bg-white dark:bg-black flex items-center justify-center"
       >
         <canvas ref={canvasRef}></canvas>
       </motion.div>

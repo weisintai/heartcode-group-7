@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 const NCCSEA: React.FC = () => {
   return (
-    <div className="min-h-screen bg-blue-950 font-mono">
+    <div className="min-h-screen bg-blue-500 dark:bg-blue-950 font-mono">
       <header className="bg-navy-blue text-white py-12 px-4">
         <div className="container mx-auto">
           <h1 className="text-4xl font-bold mb-2">NCCSEA (National Cadet Corps Sea) - My CCA</h1>
@@ -38,8 +38,8 @@ const NCCSEA: React.FC = () => {
           </ul>
         </section>
 
-        <section className="mb-12 bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-3xl font-semibold mb-4 text-black">Skills Gained</h2>
+        <section className="mb-12 bg-white dark:bg-black rounded-lg shadow-md p-6">
+          <h2 className="text-3xl font-semibold mb-4 text-black dark:text-white">Skills Gained</h2>
           <p className="mb-4">Through my involvement in NCCSEA, I have developed a variety of valuable skills, including:</p>
           <div className="grid md:grid-cols-2 gap-4 text-white">
             {[
@@ -48,7 +48,7 @@ const NCCSEA: React.FC = () => {
               { skill: "Teamwork", description: "Improved skills working closely with peers to achieve common goals" },
               { skill: "Confidence", description: "Increased confidence in public speaking and handling responsibility" }
             ].map((item, index) => (
-              <div key={index} className="bg-blue-950 p-4 rounded-lg">
+              <div key={index} className="bg-blue-500 dark:bg-blue-950 p-4 rounded-lg">
                 <h3 className="font-semibold text-lg mb-2 text-white">{item.skill}</h3>
                 <p>{item.description}</p>
               </div>
@@ -58,7 +58,7 @@ const NCCSEA: React.FC = () => {
 
         <section className="mb-12">
           <h2 className="text-3xl font-semibold mb-4 text-white">Events and Camps</h2>
-          <div className="bg-white rounded-lg shadow-md p-6">
+          <div className="bg-white dark:bg-black rounded-lg shadow-md p-6">
             <p className="mb-4">
               One of the most memorable experiences was the annual NCCSEA camp, where I had the chance to
               showcase my leadership skills and work as part of a team. These events are essential to our
@@ -73,7 +73,7 @@ const NCCSEA: React.FC = () => {
 
         <section className="mb-12">
           <h2 className="text-3xl font-semibold mb-4 text-white">Conclusion</h2>
-          <div className="bg-navy-blue text-white p-6 rounded-lg shadow-md">
+          <div className="bg-white dark:bg-black text-black dark:text-white p-6 rounded-lg shadow-md">
             <p className="text-lg leading-relaxed">
               Overall, NCCSEA has been an enriching experience for me, providing me with a strong sense of
               discipline, responsibility, and leadership. It has significantly shaped my personal growth and

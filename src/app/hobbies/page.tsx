@@ -14,8 +14,8 @@ const AboutMe: React.FC = () => {
         </header>
 
         <section style={styles.introduction}>
-          <h1 className="text-2xl font-bold">Hi, I'm Lucas!</h1>
-          <p>
+          <h1 className="text-2xl font-bold text-black dark:text-white">Hi, I'm Lucas!</h1>
+          <p className="text-black dark:text-white">
             I love cycling as a hobby because I got to meet many new friends
             through it and explored places I've never been to in Singapore.
           </p>
@@ -23,11 +23,11 @@ const AboutMe: React.FC = () => {
 
         <section style={styles.hobbies} className="flex gap 3">
           <div>
-            <h2 className="text-2xl font-bold">What Bike Do I Ride?</h2>
+            <h2 className="text-2xl font-bold text-black dark:text-white">What Bike Do I Ride?</h2>
             <div style={styles.hobbyList}>
               <div style={styles.hobbyItem}>
-                <h3>Fixed Gear Bike</h3>
-                <p>
+                <h3 className="text-black dark:text-white">Fixed Gear Bike</h3>
+                <p className="text-black dark:text-white">
                   A fixed gear bike is a very unique bike that only has one gear
                   and has no brakes and you stop by applying pressure on the
                   paddles as the pedals won't stop moving.
@@ -41,9 +41,9 @@ const AboutMe: React.FC = () => {
         </section>
 
         <section style={styles.contact}>
-          <h2 className="text-2xl font-bold">Add me On Social Media!</h2>
-          <p>Follow me on Instagram @_1uc45_133_</p>
-          <p>Follow me on Tik Tok @45_degree</p>
+          <h2 className="text-2xl font-bold text-black dark:text-white">Add me On Social Media!</h2>
+          <p className="text-black dark:text-white">Follow me on Instagram @_1uc45_133_</p>
+          <p className="text-black dark:text-white">Follow me on Tik Tok @45_degree</p>
         </section>
       </div>
     </BackgroundBeamsWithCollision>

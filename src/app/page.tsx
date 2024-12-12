@@ -1,13 +1,16 @@
 import Snorlax from "@/app/assets/Snorlax.jpeg";
 import Image from "next/image";
 import Link from "next/link";
+import { FlipWords } from "@/components/ui/flip-words";
 
 export default function Home() {
+
+  const words = ["DRUGS", "WEED", "ICE", "CRACK", "CANNABIS"];
   return (
-    <div className="min-h-screen bg-neutral-800 font-sans">
+    <div className="min-h-screen bg-white dark:bg-neutral-800 font-sans">
       <header className="bg-neutral-600 text-white text-center py-8">
-        <h1 className="text-5xl font-mono font-bold mb-2">
-          CHOOSE LIFE, NOT DRUGS
+        <h1 className="text-5xl font-mono font-bold mb-2 text-white">
+          CHOOSE LIFE, NOT  <FlipWords words={words} />
         </h1>
         <p className=" font-mono font-normal mb-4">
           Join Us In The Fight Against Drug Abuse And Help Create A Healthier,
@@ -17,16 +20,16 @@ export default function Home() {
           href="#learn-more"
           className="bg-neutral-500 text-white px-6 py-2 rounded-md inline-block hover:bg-neutral-700 transition-colors"
         >
-          Learn More
+          Learn More Below
         </Link>
       </header>
 
       <main className="container mx-auto px-4">
         <section id="say-no-to-drugs" className="my-12 text-center">
-          <h2 className="text-3xl font-bold font-mono text-white border-b-2 border-neutral-500 pb-2 mb-6">
+          <h2 className="text-3xl font-bold font-mono text-black dark:text-white border-b-2 border-neutral-500 pb-2 mb-6">
             Why Say No to Drugs?
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 text-black dark:text-black ">
             {[
               {
                 title: "Protect Your Brain",
@@ -48,7 +51,7 @@ export default function Home() {
                 key={index}
                 className="bg-white border-2 border-neutral-500 rounded-lg p-6 shadow-md"
               >
-                <h3 className="text-xl font-bold font-mono text-black mb-2">
+                <h3 className="text-xl font-bold font-mono text-black dark:text-black mb-2">
                   {reason.title}
                 </h3>
                 <p>{reason.content}</p>
@@ -58,24 +61,24 @@ export default function Home() {
         </section>
 
         <section id="statistics" className="my-12">
-          <h2 className="text-3xl font-bold font-mono text-white border-b-2 border-neutral-500 pb-2 mb-6">
+          <h2 className="text-3xl font-bold font-mono text-black dark:text-white border-b-2 border-neutral-500 pb-2 mb-6">
             Statistics and Facts
           </h2>
-          <p className="text-lg mb-2 text-white">
+          <p className="text-lg mb-2 text-black dark:text-white">
             Did you know? Over <strong>200 million</strong> people worldwide use
             drugs at least once a year.
           </p>
-          <p className="text-lg text-white">
+          <p className="text-lgtext-black dark:text-white">
             In Singapore, the number of drug abusers arrested in 2023{" "}
             <strong>increased by 10%</strong> from 2022.
           </p>
         </section>
 
         <section id="stories" className="my-12">
-          <h2 className="text-3xl font-bold font-mono text-white border-b-2 border-neutral-500 pb-2 mb-6">
+          <h2 className="text-3xl font-bold font-monotext-black dark:text-white border-b-2 border-neutral-500 pb-2 mb-6">
             Personal Stories
           </h2>
-          <p className="mb-4 text-white">
+          <p className="mb-4text-black dark:text-white">
             Read inspiring stories of individuals like Jeremy who have overcome
             addiction.
           </p>
@@ -89,7 +92,7 @@ export default function Home() {
         </section>
 
         <section id="prevention-articles" className="my-12">
-          <h2 className="text-3xl font-bold font-mono text-white border-b-2 border-neutral-500 pb-2 mb-6">
+          <h2 className="text-3xl font-bold font-mono text-black dark:text-white border-b-2 border-neutral-500 pb-2 mb-6">
             Drug Prevention Articles
           </h2>
           <ul className="space-y-2">
@@ -123,10 +126,10 @@ export default function Home() {
         </section>
 
         <section id="support" className="my-12">
-          <h2 className="text-3xl font-bold font-mono text-white border-b-2 border-neutral-500 pb-2 mb-6">
+          <h2 className="text-3xl font-bold font-mono text-black dark:text-white border-b-2 border-neutral-500 pb-2 mb-6">
             Support and Help
           </h2>
-          <p className="mb-4 text-white">
+          <p className="mb-4 text-black dark:text-white">
             If you or someone you know needs help, contact our support services.
           </p>
           <ul className="space-y-2">
@@ -143,16 +146,16 @@ export default function Home() {
         </section>
 
         <section id="events" className="my-12">
-          <h2 className="text-3xl font-bold font-mono text-white border-b-2 border-neutra;-500 pb-2 mb-6">
+          <h2 className="text-3xl font-bold font-mono text-black dark:text-white border-b-2 border-neutra;-500 pb-2 mb-6">
             Events and Campaigns
           </h2>
-          <h2 className="text-1x1 font-normal text-white">
+          <h2 className="text-1x1 font-normal text-black dark:text-white">
             Join our upcoming events and campaigns to raise awareness and
             support the cause{" "}
           </h2>
           <Link
             href="https://www.sana.org.sg/events/"
-            className="text-2x1 font-semibold text-white hover:underline"
+            className="text-2x1 font-semibold text-black dark:text-white hover:underline"
           >
             here
           </Link>
@@ -160,10 +163,10 @@ export default function Home() {
         </section>
 
         <section id="find-out-more" className="my-12 text-center">
-          <h2 className="text-3xl font-bold font-mono text-white border-b-2 border-neutral-500 pb-2 mb-6">
+          <h2 className="text-3xl font-bold font-mono text-black dark:text-white border-b-2 border-neutral-500 pb-2 mb-6">
             Find Out More About Anti-Drug Abuse
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 text-black dark:text-black ">
             {[
               {
                 title: "Central Narcotics Bureau (CNB)",
@@ -203,7 +206,7 @@ export default function Home() {
                     height={100}
                     className="mx-auto mb-4"
                   />
-                  <p className="text-black font-bold hover:underline">
+                  <p className="text-black dark:text-black font-bold hover:underline">
                     {org.title}
                   </p>
                 </Link>
@@ -214,28 +217,9 @@ export default function Home() {
       </main>
 
       <footer className="bg-neutral-700 text-white text-center py-8">
-        <p className="mb-4">
-          Contact us: info@antidrugcampaign.org | Follow us on social media
+        <p className="mb-4 text-2xl font-mono">
+        “If You Can Quit For A Day, You Can Quit For A Lifetime.”
         </p>
-        <form className="flex justify-center items-center">
-          <label htmlFor="email" className="sr-only">
-            Subscribe to our newsletter:
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your email"
-            className="px-4 py-2 rounded-l-md text-gray-800"
-            required
-          />
-          <button
-            type="submit"
-            className="bg-neutral-500 text-white px-4 py-2 rounded-r-md hover:bg-neutral-600 transition-colors"
-          >
-            Subscribe
-          </button>
-        </form>
       </footer>
     </div>
   );
