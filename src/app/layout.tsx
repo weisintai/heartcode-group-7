@@ -28,21 +28,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-dvh`}
       >
-         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-        <main className="h-full">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main className="h-full">
+            <MyNavigationMenu />
+            {children}
+          </main>
           <Toaster />
-          <MyNavigationMenu />
-          {children}
-          
-        </main>
         </ThemeProvider>
       </body>
     </html>
   );
 }
-

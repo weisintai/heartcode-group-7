@@ -62,8 +62,8 @@ export default function Quiz() {
             name="question1"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Question 1:</FormLabel>
-                <FormDescription>
+                <FormLabel className="font-bold">Question 1:</FormLabel>
+                <FormDescription className="font-semibold">
                   What is a common physical sign of drug abuse?
                 </FormDescription>
                 <Select
@@ -91,8 +91,8 @@ export default function Quiz() {
             name="question2"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Question 2:</FormLabel>
-                <FormDescription>
+                <FormLabel className="font-bold">Question 2:</FormLabel>
+                <FormDescription className="font-semibold">
                   Which of the following is a potential consequence of drug
                   abuse?
                 </FormDescription>
@@ -123,8 +123,8 @@ export default function Quiz() {
             name="question3"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Question 3:</FormLabel>
-                <FormDescription>
+                <FormLabel className="font-bold">Question 3:</FormLabel>
+                <FormDescription className="font-semibold">
                   What is one of the most effective ways to prevent drug abuse
                   among teenagers?
                 </FormDescription>
@@ -157,8 +157,8 @@ export default function Quiz() {
             name="question4"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Question 4:</FormLabel>
-                <FormDescription>
+                <FormLabel className="font-bold">Question 4:</FormLabel>
+                <FormDescription className="font-semibold">
                   Which substance is commonly associated with addiction and
                   withdrawal symptoms?
                 </FormDescription>
@@ -187,8 +187,8 @@ export default function Quiz() {
             name="question5"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Question 5:</FormLabel>
-                <FormDescription>
+                <FormLabel className="font-bold">Question 5:</FormLabel>
+                <FormDescription className="font-semibold">
                   What is a common reason individuals may turn to drug use?
                 </FormDescription>
                 <Select
