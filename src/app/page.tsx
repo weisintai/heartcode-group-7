@@ -2,6 +2,7 @@ import Snorlax from "@/app/assets/Snorlax.jpeg";
 import Image from "next/image";
 import Link from "next/link";
 import { FlipWords } from "@/components/ui/flip-words";
+import { LinkPreview } from "@/components/ui/LinkPreview";
 
 export default function Home() {
   const words = ["DRUGS", "WEED", "ICE", "CRACK", "CANNABIS"];
@@ -97,28 +98,26 @@ export default function Home() {
           <ul className="space-y-2">
             {[
               {
+                title: "Preventive Drug Education in Singapore",
+                url: "https://www.cnb.gov.sg/aseanpde/who-we-are/preventive-drug-education-approaches/singapore",
+              },
+              {
                 title:
-                  "Preventing Drug Misuse and Addiction: The Best Strategy",
-                url: "https://nida.nih.gov/publications/drugs-brains-behavior-science-addiction/preventing-drug-misuse-addiction-best-strategy",
+                  "Singapore Schools Include Anti-Drug Content in More Subjects",
+                url: "https://www.todayonline.com/singapore/singapore-schools-include-anti-drug-content-more-subjects-amid-rise-young-abusers-2373096",
               },
               {
-                title: "New Approaches to Combat Youth Substance Misuse",
-                url: "https://www.apa.org/monitor/2024/03/new-approaches-youth-substance-misuse",
-              },
-              {
-                title: "Prevention Research by NIDA",
-                url: "https://nida.nih.gov/research-topics/prevention",
+                title: "Keeping Singapore Drug-Free",
+                url: "https://www.hometeamns.sg/frontline/keeping-singapore-drug-free/",
               },
             ].map((article, index) => (
               <li key={index} className="bg-gray-100 p-3 rounded-md">
-                <Link
-                  href={article.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-black hover:underline"
+                <LinkPreview
+                  url={article.url}
+                  className="!text-black !hover:underline"
                 >
                   {article.title}
-                </Link>
+                </LinkPreview>
               </li>
             ))}
           </ul>
@@ -194,12 +193,7 @@ export default function Home() {
                 key={index}
                 className="bg-white p-6 rounded-lg shadow-md flex justify-center items-center"
               >
-                <Link
-                  href={org.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
-                >
+                <LinkPreview url={org.url} className="!block">
                   <Image
                     src={`/icon/${org.icon}`}
                     alt={`${org.title} Icon`}
@@ -210,7 +204,7 @@ export default function Home() {
                   <p className="text-black dark:text-black font-bold hover:underline">
                     {org.title}
                   </p>
-                </Link>
+                </LinkPreview>
               </div>
             ))}
           </div>
