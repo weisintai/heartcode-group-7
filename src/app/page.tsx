@@ -82,13 +82,9 @@ export default function Home() {
             Read inspiring stories of individuals like Jeremy who have overcome
             addiction.
           </p>
-          <Link
-            href="https://www.getsmartaboutdrugs.gov/consequences/true-stories/true-story-jeremy-b"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <LinkPreview url="https://www.getsmartaboutdrugs.gov/consequences/true-stories/true-story-jeremy-b">
             <Image src={Snorlax} alt="" height={100} width={100} />
-          </Link>
+          </LinkPreview>
         </section>
 
         <section id="prevention-articles" className="my-12">
@@ -151,12 +147,12 @@ export default function Home() {
             Join our upcoming events and campaigns to raise awareness and
             support the cause{" "}
             <span>
-              <Link
-                href="https://www.sana.org.sg/events/"
+              <LinkPreview
+                url="https://www.sana.org.sg/events/"
                 className="text-2x1 font-semibold text-black dark:text-white hover:underline"
               >
                 here
-              </Link>
+              </LinkPreview>
               .
             </span>
           </h2>
